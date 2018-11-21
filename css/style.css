@@ -1,0 +1,126 @@
+@charset 'UTF-8';
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    font-family: '游ゴシック', YuGothic, 'メイリオ', Verdana, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+
+    letter-spacing: .1em;
+
+}
+
+a
+{
+    text-decoration: none;
+
+    color: #14c0c9;
+}
+a:visited
+{
+    color: #0f949b;
+}
+a:hover
+{
+    color: #0f949b;
+}
+a:active
+{
+    color: #16d6e0;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+
+
+/*header*/
+
+.top-image{
+    background-image:url(../images/blog.jpg);
+    width:100%;
+    height:500px;
+    background-size:cover;
+    background-position:center center;
+}
+/* Align ！テキストを中央にしたい場合は先に定義しておく！
+------------------------------------------------------------*/
+.text-center
+{
+    text-align: center;
+}
+
+/*main*/
+section{
+    padding:60px 0; /*section要素の余白を上下６０pxで揃える（sectionの内側だからpadding)*/
+}
+section .container{
+    width: 90%;/*sectionの中のインナーボックスをウィンドウ幅に対して９０％に*/
+}
+section h1{
+    font-size:4.3rem;
+}
+section h2{
+    font-size:3.2rem;/*sectionの中にある見出しを３.２pxで揃える。containerの見出しテキスト*/
+}
+.block-center,
+section .container{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#skills{
+    background-color:#faede5;
+}
+#skills .container{
+    display:-webkit-flex;/*flex-box.親要素に指定→一番高い要素に揃える*/
+    display:        flex;
+   
+    justify-content: space-between;/*両サイドのアイテムはそれぞれ端に、残りは等間隔にする*/
+}
+#skills .h2{
+    margin-bottom:60px;
+    color:#aabade;
+}
+#skills .text-box{
+    -webkit-box-sizing:border-box;/*ベンダープレフィックス必要*/
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;/*上下左右の余白も含めた大きさになる。通常はcontents-box*/
+    -webkit-flex:1;/*ベンダープレフィックス必要*/
+            flex:1;/*Flexboxでレイアウトした場合に横幅を指定することができる。横並びのFlexboxなので、 flex: 1; とすると、.skill-boxが全て1の横幅、つまり全て同じ幅になるように自動調整されます。*/
+            margin: 0 10px;
+            padding:20px;
+    -webkit-border-radius:4px;
+       -moz-border-radius:4px;
+
+    background-color:#fff;
+}
+#footer .button .button-readmore{
+    display:block;
+    text-align:center;
+    width: 180px;
+    margin: auto;
+    padding: 5px 0;
+    color: #fff;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background-color: #14c0c9;
+}
+/*以下レスポンシブ・メディアクエリ*/
+
+@media (max-width: 768px) {
+  #skills .container {
+    -webkit-flex-direction: column;/*columnは縦並び。rowは横並び*/
+            flex-direction: column;}
+  #skills .text-box {
+    margin: 10px 0px; }
+    }
