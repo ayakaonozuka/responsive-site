@@ -52,8 +52,11 @@ a:hover
 }
 /* Align ！テキストを中央にしたい場合は先に定義しておく！
 ------------------------------------------------------------*/
-.text-center
+.text-center 
 {
+    text-align: center;
+}
+.text-box  {
     text-align: center;
 }
 
@@ -103,6 +106,7 @@ section .container{
 
     background-color:#fff;
 }
+
 #footer .button .button-readmore{
     display:block;
     text-align:center;
@@ -118,9 +122,12 @@ section .container{
 /*以下レスポンシブ・メディアクエリ*/
 
 @media (max-width: 768px) {
-  #skills .container {
-    -webkit-flex-direction: column;/*columnは縦並び。rowは横並び*/
-            flex-direction: column;}
-  #skills .text-box {
+    .top-image{
+        height:250px;
+    }
+    #skills .container {
+        -webkit-flex-direction: column;/*columnは縦並び。rowは横並び*/
+                flex-direction: column;}
+    #skills .text-box {
     margin: 10px 0px; }
     }
